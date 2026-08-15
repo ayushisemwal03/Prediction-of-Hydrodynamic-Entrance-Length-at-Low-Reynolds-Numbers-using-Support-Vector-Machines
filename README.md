@@ -39,13 +39,11 @@ $$L_e/D = \frac{0.6}{1 + 0.035Re} + 0.056Re$$
 
 ---
 
-## 3. Modeling assumptions (explicitly stated for transparency)
+## 3. Modeling assumptions 
 
 - **Laminar Flow Only:** The Reynolds number is strictly capped at $Re = 2000$. Turbulent transition ($Re > 4000$) where the entrance length scales differently is explicitly excluded.
 - **Idealized Synthetic Data:** The dataset is synthetically generated from the exact empirical relation, assuming perfect physical compliance without experimental noise, measurement error, or viscous dissipation.
 - **SVR Kernel Limitation:** The Support Vector Machine models are deliberately restricted to a `linear` kernel. This is a methodological choice to test the limits of linear hyperplanes on a rational function, which is called out explicitly in the results/limitations section below.
-
-These are stated up front deliberately — every ML model is an approximation of the data it is fed, and being explicit about the fluid dynamics constraints ensures the predictions are not misused outside their aerodynamic scope.
 
 ---
 
@@ -59,7 +57,7 @@ These are stated up front deliberately — every ML model is an approximation of
 
 ---
 
-## 5. Verification (Evaluation against analytical solutions)
+## 5. Verification 
 
 The machine learning formulations are checked against the known analytical outputs in the testing set using standard regression metrics.
 
